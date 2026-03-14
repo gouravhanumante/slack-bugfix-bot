@@ -32,7 +32,7 @@ export const config = {
   },
   bot: {
     repoBaseBranch: process.env.REPO_BASE_BRANCH || "main",
-    maxAgentIterations: parseInt(process.env.MAX_AGENT_ITERATIONS || "25", 10),
+    maxAgentIterations: Math.max(1, parseInt(process.env.MAX_AGENT_ITERATIONS || "25", 10) || 25),
     maxConcurrentTickets: Math.max(1, parseInt(process.env.MAX_CONCURRENT_TICKETS || "1", 10) || 1),
   },
 };

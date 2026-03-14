@@ -64,6 +64,7 @@ export function registerCommands(app: App) {
         return;
       default:
         console.warn(`Unexpected queue status for bug #${ticketId}:`, queueResult);
+        await messenger(`:warning: Could not queue bug *#${ticketId}*. Please try again.`);
         return;
     }
   });
