@@ -1,0 +1,23 @@
+{
+  "name": "slack-bugfix-bot",
+  "version": "1.0.0",
+  "description": "Slack bot that picks up Azure DevOps bugs, fixes them with Cursor Agent CLI, and creates PRs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "@slack/bolt": "^4.1.0",
+    "azure-devops-node-api": "^14.1.0",
+    "dotenv": "^16.4.7",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
